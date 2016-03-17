@@ -25,9 +25,9 @@ if($OSNAME == "Darwin")then
     set CXXNAME = "/usr/bin/gcc"
 else if($OSNAME == "Linux") then
     set MNAME = `uname -m`
-    set CPPOPTS = " -O3 -mcpu=$MNAME "
-    set INCDIRS = ""
-    set LDIRS = ""
+    set CPPOPTS = " -O3 -mtune=native "
+    set INCDIRS = " -I/usr/include "
+    set LDIRS = " -L/usr/lib -lgsl -lgslcblas -lm "
 endif   
 
 echo $CPPOPTS > $CPPOPTSF
