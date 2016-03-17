@@ -11,6 +11,7 @@
 
 
 #include "mpi_map.h"
+#include <cstring>
 
 /* 
    We initialize the vectors of maps to its initially	
@@ -108,7 +109,7 @@ void ENTRDATA::mpi_map::Print(std::ostream& out) const {
   out<<"# name: struct_name\n";
   out<<"# type: string\n";
   out<<"# elements: 1\n";
-  out<<"# length: "<<strlen(GetName())<<"\n";
+  out<<"# length: "<<std::strlen(GetName())<<"\n";
   out<<GetName()<<"\n";
   out<<"# name: len\n";
   out<<"# type: matrix\n";
