@@ -19,7 +19,7 @@ TEST_EXEC = test
 HEADS = utility.h utility_2.h utility_3.h compiler.h Makefile $(CPPOPTSF) $(INCDIRSF) $(LDIRSF) machine_select
 
 test: tmp.o random.o dierfc.o specfun.o
-	$(CXX) $(LDFLAGS) $(LIBS) dierfc.o random.o tmp.o 
+	$(CXX) dierfc.o random.o tmp.o $(LDFLAGS) $(LIBS)
 	mv a.out $(TEST_EXEC)
 
 tmp.o: tmp.cc $(HEADS)

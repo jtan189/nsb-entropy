@@ -37,7 +37,7 @@ EXEC  = $(BPATH)/nsb-entropy
 
 
 $(BPATH)/$(EXEC): $(OBJS) $(LOCINC)/test
-	$(LD) $(LDFLAGS) $(LIBS) $(OBJS) $(INCOBJS)
+	$(LD) $(OBJS) $(INCOBJS) $(LDFLAGS) $(LIBS)
 	mv a.out $(EXEC)
 
 $(LOCINC)/test: $(LOCINC)
